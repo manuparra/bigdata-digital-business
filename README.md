@@ -30,6 +30,31 @@ In our daily lives we are accustomed to using tools and platforms that work with
 
 4. Sensor Data: The Internet of Things (IoT) has led to an explosion of connected devices that generate massive amounts of sensor data, including data from smart homes, industrial machines, and connected vehicles.
 
+### BigData challenges
+
+While Big Data has the potential to revolutionize industries and drive innovation, there are also several challenges and problems that must be addressed in order to effectively work with Big Data. Here are some of the main problems that organizations face with Big Data:
+
+- **Volume**: The sheer volume of data generated and collected can be overwhelming. Storing, processing, and analyzing large data sets can require significant resources, including specialized hardware and software, and can be time-consuming.
+
+- **Variety**: Big Data comes in many different formats, including structured data, unstructured data, and semi-structured data. This variety can make it challenging to integrate data from different sources and to ensure consistency and quality across data sets.
+
+- **Velocity**: Data is generated at a rapid pace, and it can be difficult to keep up with the speed at which data is generated and changes. Real-time processing and analysis is often required to keep up with the velocity of data.
+
+- **Veracity**: Big Data is not always accurate, and it can be difficult to determine the quality and reliability of the data. Organizations must ensure that they are working with high-quality data to make informed decisions.
+
+- **Privacy and Security**: Big Data often contains sensitive or personal information, and organizations must take steps to protect data privacy and security. This includes implementing data governance and compliance policies and using encryption and other security measures.
+
+- **Skills and Talent**: Working with Big Data requires specialized skills, including data science, analytics, and programming. Organizations must invest in training and development to build a skilled workforce capable of working with Big Data.
+
+- **Cost**: The cost of storing, processing, and analyzing Big Data can be significant. Organizations must consider the cost of infrastructure, software, and talent when working with Big Data.
+
+Organizations/Companies must address these challenges and problems to effectively work with Big Data:
+
+- By **investing in the right tools**, 
+- **infrastructure**, and 
+- **talent**.
+
+
 ### Applications of Big Data in business and finance
 ### The impact of Big Data on decision-making and strategy
 
