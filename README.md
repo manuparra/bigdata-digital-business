@@ -2,7 +2,22 @@
 
 ## Introduction to Big Data in Business and Finance
 
-### Definition and characteristics of Big Data
+### Definition and features of Big Data
+
+#### Big Data ?
+
+Big Data refers to extremely large and complex data sets that cannot be processed, managed or analyzed by traditional data processing software. 
+
+Big Data typically includes data from various sources, including social media, sensor data, and transactional data, and can be analyzed to uncover patterns, trends, and insights that can inform business decisions and drive innovation
+
+#### History of Big Data
+
+The concept of Big Data has been around for many years, but it was only with the advent of powerful computers and the growth of the Internet that Big Data began to have a significant impact on business and society.
+
+In the early 2000s, the term "Big Data" was first used to describe the increasing volume, velocity, and variety of data being generated. The widespread adoption of cloud computing and the growth of the Internet of Things (IoT) in the 2010s further fueled the growth of Big Data, as more and more devices and systems began to generate massive amounts of data.
+
+Today, Big Data is a critical part of many industries, from healthcare and retail to finance and government, and is driving innovation and growth across the global economy. Companies are leveraging Big Data to make more informed business decisions, improve the customer experience, and develop new products and services.
+
 ### Applications of Big Data in business and finance
 ### The impact of Big Data on decision-making and strategy
 
