@@ -22,4 +22,48 @@ There are several key differences between working with BigData in a cloud comput
 - Security: Cloud computing platforms typically offer advanced security features to protect against data breaches and other types of cyber threats. However, businesses must still take precautions to ensure the security of their data when using cloud services.
 - Skillset: Working with BigData in a cloud computing environment requires a different skillset than working with it on a local computer. Users must be familiar with cloud computing platforms, as well as the specific tools and services they offer for processing and analyzing data.
 
+# BigData programming languages
+
+There are several programming languages and features that are commonly used for BigData work, including:
+
+- Java: Java is a popular programming language for BigData processing and analysis, due to its scalability and compatibility with the Hadoop ecosystem. Java-based tools such as Hadoop MapReduce and Apache Spark are widely used in BigData applications.
+- Python: Python is another popular language for BigData work, thanks to its ease of use and wide range of data processing and analysis libraries, including NumPy, Pandas, and Scikit-learn. Python is also compatible with Hadoop and Spark, making it a versatile choice for BigData applications.
+- SQL: Structured Query Language (SQL) is a standard language for managing and querying structured data in databases. Many BigData platforms, such as Apache Hive and Apache Phoenix, support SQL-based querying, making it a valuable skill for BigData analysts and engineers.
+- Scala: Scala is a programming language that combines functional and object-oriented programming paradigms. It is particularly well-suited for BigData work, thanks to its compatibility with the Apache Spark platform and its support for distributed processing.
+- R: R is a language and environment for statistical computing and graphics. It is widely used in BigData applications for data analysis and visualization, thanks to its extensive range of statistical and graphical libraries.
+
+In addition to these programming languages, there are several key features and tools that are important for BigData work, such as:
+
+- distributed processing, 
+- parallel computing, and 
+- data visualization.
+
+
+# Platforms we will work with during the course
+
+## Google Colaboratory
+
+Commonly known as Google Colab, is a cloud-based data science and machine learning platform that allows users to write and run Python code in a Jupyter notebook environment. It provides free access to a virtual machine with pre-installed packages and libraries for data analysis and machine learning, eliminating the need for users to install these tools on their local machines.
+
+Some key features of Google Colab include:
+
+- Jupyter notebooks: Google Colab provides a Jupyter notebook environment, which allows users to write and execute Python code in a web-based interface.
+- Free GPU and TPU access: Google Colab provides free access to GPUs and TPUs, which can greatly accelerate the training of machine learning models.
+- Collaboration: Users can share their notebooks with others, allowing for easy collaboration on data science projects.
+- Cloud storage: Google Colab provides access to Google Drive, allowing users to easily store and share data and notebooks in the cloud.
+- Pre-installed packages: Google Colab comes pre-installed with many popular Python packages and libraries, including NumPy, Pandas, Scikit-learn, and TensorFlow.
+
+Overall, Google Colab provides a convenient and accessible platform for data analysis and machine learning, particularly for those who may not have access to high-performance computing resources on their local machines.
+
+## Databricks 
+
+Databricks is a cloud-based big data processing and analytics platform designed to handle large-scale data processing and machine learning workloads. It is built on top of Apache Spark and offers a collaborative workspace for data engineers, data scientists, and business analysts.
+
+Some key features of Databricks include:
+
+- Unified analytics platform: Databricks offers a unified platform for data processing, data analytics, and machine learning. It includes built-in tools for data visualization, data exploration, and model building.
+- Apache Spark: Databricks is built on top of Apache Spark, an open-source big data processing engine that can handle large-scale data processing and machine learning workloads.
+- Collaboration: Databricks provides a collaborative workspace for data engineers, data scientists, and business analysts. It includes built-in tools for version control, collaboration, and sharing.
+- Scalability: Databricks is designed to scale horizontally, which means that it can handle large-scale data processing workloads without requiring significant changes to the underlying infrastructure.
+- Security: Databricks provides built-in security features, including role-based access control, encryption, and network isolation.
 
