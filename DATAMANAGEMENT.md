@@ -33,13 +33,11 @@ There are several programming languages and features that are commonly used for 
 - R: R is a language and environment for statistical computing and graphics. It is widely used in BigData applications for data analysis and visualization, thanks to its extensive range of statistical and graphical libraries.
 
 In addition to these programming languages, there are several key features and tools that are important for BigData work, such as:
-
 - distributed processing, 
 - parallel computing, and 
-- data visualization.
+- data visualization
 
-
-# Platforms we will work with during the course
+# Platforms we will work with during the course
 
 ## Google Colaboratory
 
@@ -66,4 +64,21 @@ Some key features of Databricks include:
 - Collaboration: Databricks provides a collaborative workspace for data engineers, data scientists, and business analysts. It includes built-in tools for version control, collaboration, and sharing.
 - Scalability: Databricks is designed to scale horizontally, which means that it can handle large-scale data processing workloads without requiring significant changes to the underlying infrastructure.
 - Security: Databricks provides built-in security features, including role-based access control, encryption, and network isolation.
+
+# R as BigData tool
+
+R is a powerful programming language and software environment for statistical computing and graphics. While R is often associated with traditional statistical analysis, it can also be used for big data processing and analytics.
+
+There are several reasons why R can be a good choice for big data processing:
+- Data manipulation and analysis: R has a rich set of libraries and packages for data manipulation and analysis. This makes it easy to perform complex data transformations, filtering, and aggregation operations on large datasets.
+- Machine learning: R has a growing set of libraries and packages for machine learning, including algorithms for classification, regression, clustering, and more. These packages can be used to build models on large datasets and perform predictive analytics.
+- Visualization: R has powerful tools for data visualization, including ggplot2, lattice, and others. These tools can be used to create high-quality plots and visualizations of big data.
+- Community support: R has a large and active community of users and developers who contribute to its development and provide support through forums, blogs, and other resources.
+
+When it comes to big data platforms for R, there are several options available:
+- Apache Spark: Apache Spark is a popular big data processing engine that can be used with R. The sparklyr package provides an interface for using Spark with R, making it easy to process large datasets in a distributed manner.
+- Hadoop: R can be used with Hadoop, a popular open-source big data platform. The rhdfs and rhbase packages provide interfaces for using Hadoop Distributed File System (HDFS) and Hadoop Database (HBase) with R.
+- Amazon Web Services: Amazon Web Services (AWS) provides several big data platforms that can be used with R, including Amazon EMR (Elastic MapReduce), which provides a managed Hadoop cluster, and Amazon Redshift, a cloud-based data warehousing service.
+- Microsoft Azure: Microsoft Azure provides several big data platforms that can be used with R, including HDInsight, a managed Hadoop cluster, and Azure Machine Learning, a cloud-based machine learning platform.
+
 
