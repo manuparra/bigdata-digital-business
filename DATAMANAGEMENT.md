@@ -125,6 +125,46 @@ write.df(grouped_data, "hdfs://path/to/output.parquet", source = "parquet", mode
 
 ```
 
+## An example with Sparklyr
+
+Suppose you have a large dataset in a distributed Spark cluster, and you want to perform some data manipulation tasks on it using R. You can use the sparklyr package to connect to the Spark cluster and manipulate the data using familiar R syntax.
+
+First, you need to install the sparklyr package and load it into your R session:
+
+```
+install.packages("sparklyr")
+library(sparklyr)
+```
+
+Next, you need to connect to your Spark cluster using the spark_connect() function. This function takes several arguments to specify the configuration of your Spark cluster, such as the Spark master URL and the number of executor nodes.
+
+```
+sc <- spark_connect(master = "spark://localhost:7077", version = "2.4.3")
+```
+
+Once you're connected to the Spark cluster, you can load your data into a Spark DataFrame using the spark_read_csv() function. This function takes several arguments to specify the location of the data, the file format, and any other configuration options.
+
+```
+my_data <- spark_read_csv(sc, "path/to/my/data.csv", header = TRUE, infer_schema = TRUE)
+```
+
+You can then perform various data manipulation tasks on the Spark DataFrame using the dplyr syntax, which is supported by sparklyr. For example, you can filter rows based on a condition using the filter() function:
+
+```
+filtered_data <- my_data %>% filter(column_name > 10)
+```
+
+You can also group the data by one or more columns using the group_by() function:
+
+```
+grouped_data <- my_data %>% group_by(column_name)
+```
+
+Finally, you can write the processed data back to the Spark cluster using the spark_write_csv() function:
+
+```
+spark_write_csv(filtered_data, "path/to/filtered_data.csv")
+```
 
 
 
