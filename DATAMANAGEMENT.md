@@ -81,4 +81,50 @@ When it comes to big data platforms for R, there are several options available:
 - Amazon Web Services: Amazon Web Services (AWS) provides several big data platforms that can be used with R, including Amazon EMR (Elastic MapReduce), which provides a managed Hadoop cluster, and Amazon Redshift, a cloud-based data warehousing service.
 - Microsoft Azure: Microsoft Azure provides several big data platforms that can be used with R, including HDInsight, a managed Hadoop cluster, and Azure Machine Learning, a cloud-based machine learning platform.
 
+# Starting BigData with R: Data management
+
+## An example with SparkR
+
+A large dataset stored in a distributed file system such as Hadoop Distributed File System (HDFS) and we want to perform some data management tasks on it using SparkR. 
+
+We first need to start a Spark session using SparkR and load the dataset into a Spark DataFrame. We can do this as follows:
+
+
+```
+# Load SparkR package
+library(SparkR)
+
+# Start a Spark session
+sparkR.session()
+
+# Load data into Spark DataFrame
+df <- read.df("hdfs://path/to/dataset.csv", source = "csv", header = TRUE)
+```
+
+Once the data is loaded into the DataFrame, we can perform various data management tasks such as selecting columns, filtering rows, and aggregating data. Here are some examples:
+
+
+```
+# Select columns
+selected_cols <- select(df, "col1", "col2")
+
+# Filter rows based on a condition
+filtered_rows <- filter(df, df$col1 > 10)
+
+# Group data by a column and compute a summary statistic
+grouped_data <- agg(df, "col1" = "sum", "col2" = "avg")
+
+```
+
+Finally, we can save the processed data back to a distributed file system:
+
+
+```
+# Save DataFrame to HDFS as Parquet file format
+write.df(grouped_data, "hdfs://path/to/output.parquet", source = "parquet", mode = "overwrite")
+
+```
+
+
+
 
