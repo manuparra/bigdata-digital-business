@@ -166,5 +166,38 @@ Finally, you can write the processed data back to the Spark cluster using the sp
 spark_write_csv(filtered_data, "path/to/filtered_data.csv")
 ```
 
+## Main operations in Data Management
+
+1. Data import/export: This involves reading data from external sources such as CSV, Excel, or SQL databases, and exporting data in various formats. R provides several packages such as readr, readxl, RMySQL, and many more to import data, and write.csv or write.xlsx to export data.
+2. Data cleaning: This involves identifying and correcting errors or inconsistencies in the data, such as missing values, duplicates, or outliers. R provides several packages such as dplyr, tidyr, and stringr that can be used to clean the data.
+3. Data transformation: This involves manipulating the data to create new variables, aggregate data, or merge datasets. R provides several packages such as dplyr, tidyr, reshape2, and plyr that can be used for data transformation.
+4. Data visualization: This involves creating plots and charts to better understand the data and identify patterns or trends. R provides several packages such as ggplot2, lattice, and base graphics for data visualization.
+5. Data modeling: This involves building statistical models to make predictions or identify relationships between variables. R provides several packages such as lm, glm, randomForest, and many more for data modeling.
+
+## Lets play with Databricks
+
+Go to Databricks and create an free account.
+
+Once created, you will see the next:
+
+<img width="1243" alt="image" src="https://user-images.githubusercontent.com/7033451/220207960-3cfb126c-69ca-476c-8709-b98ebf1748ca.png">
+
+Now it is time to create computing resources:
+
+<img width="1243" alt="image" src="https://user-images.githubusercontent.com/7033451/220208128-c2f57d22-7d29-4dbc-9c8e-b152cd9b61c7.png">
+
+Select version, name and features:
+
+<img width="1243" alt="image" src="https://user-images.githubusercontent.com/7033451/220208219-ddfdc567-7567-4452-978d-405769e1bbd0.png">
+
+After that, go to the main screen to create a new notebook:
+
+<img width="1243" alt="image" src="https://user-images.githubusercontent.com/7033451/220208605-5c915df5-dcba-4dbd-9cf5-b0938dc1af63.png">
+
+
+
+
+
+
 
 
