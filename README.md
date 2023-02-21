@@ -295,16 +295,125 @@ Some key considerations for data storage and management in business and finance 
 - Integration: Data storage and management systems must be able to integrate with other systems and tools used by the business, such as business intelligence and analytics tools.
 
 ### Data Warehousing and Data Lakes
+
+A data lake is a repository that stores all of your organization's data — both structured and unstructured. Think of it as a massive storage pool for data in its natural, raw state (like a lake). A data lake architecture can handle the huge volumes of data that most organizations produce without the need to structure it first. Data stored in a data lake can be used to build data pipelines to make it available for data analytics tools to find insights that inform key business decisions.
+
+
+**Data Lake Benefits**
+
+Because the large volumes of data in a data lake are not structured before being stored, skilled data scientists or end-to-end self-service-bi tools can gain access to a broader range of data far faster than in a data warehouse.
+
+- Massive volumes of structured and unstructured data like ERP transactions and call logs can be stored cost effectively.
+- Data is available for use far faster by keeping it in a raw state.
+- A broader range of data can be analyzed in new ways to gain unexpected and previously unavailable insights.
+
+
+** Data warehouse** 
+Similar to a data lake, a data warehouse is a repository for business data. However, unlike a data lake, only highly structured and unified data lives in a data warehouse to support specific business intelligence and analytics needs. Think of it like an actual warehouse, where contents are first processed, then organized into sections and onto shelves (called data marts). Data from a warehouse is ready for use to support historical analysis and reporting to inform decision making across an organization’s lines of business.
+
+A cloud data warehouse is a database stored as a managed service in a public cloud and optimized for scalable BI and analytics. It removes the constraint of physical data centers and lets you rapidly grow or shrink your data warehouses to meet changing business budgets and needs.
+
+
+
+**Data Warehouse Benefits**
+
+A data warehouse offers enormous benefits to organizations, especially as it relates to BI and analytics. After the initial work of cleansing and processing, data stored in a warehouse serves as a consistent "single source of truth" which is invaluable to business data analysis, collaboration, and better insights. Three major advantages of a data warehouse include:
+
+- Little or no data prep needed, making it far easier for analysts and business users to access and analyze this data.
+- Accurate, complete data is available more quickly, so businesses can turn information into insight faster.
+- Unified, harmonized data offers a single source of truth, building trust in data insights and decision-making across business lines.
+
+
+
 ### Data Governance and Security
+
+**Data governance**
+
+Data governance refers to the system of policies, rights, responsibilities and procedures that are created and used to control data assets. The objective of data governance is to minimize risk, increase the value of data, meet regulatory compliance requirements, establish rules for data use within the organization, and improve external and internal data communication.
+
+Organizations have two main options for their data governance models. They can use a passive data governance model, in which the data is input into the system and then all verification and data cleansing procedures are performed. Or they can use an active data governance model, in which data is verified and cleaned before it is input into the system.
+
+**Data security**
+
+Data security involves creating a balance between security and data usability, using a technical framework to keep data secure from external hackers, accidental threats and malicious insiders. Although data security refers to the protection of data assets, it does incorporate some aspects of overall infrastructure security, as the security of data is ultimately reliant on sound underlying infrastructure.
+
+
+Organizations have access to multiple types of data security tools to detect, identify, protect against and respond to threats. These solutions include multi-factor authentication, firewalls, antivirus software, backup and recovery software, security information and event management solutions, and data loss prevention solutions.
+
+**Data privacy**
+
+Data privacy strategies help organizations determine what data can be shared with third parties and how it is shared. Data privacy is also referred to as information privacy. One of the major components of data privacy is access control, which can be done through various tools, policies and procedures. Along with access control, an organization can use mechanisms to prevent unauthorized access to data.
+
+Regulatory compliance is an important element of data privacy, as an organization must meet its legal obligations to keep data safe. This includes how they store, process and share their employee and customer data. If an organization fails to meet compliance requirements, it can face significant fines. Some of the most common regulations that relate to data privacy are the CCPA and the GDPR.
+
 ### Data Integration and Management
+
+Without Data Integration, accurate analytics are impossible to achieve. Imagine trying to make a decision based on incomplete data. The less information available, the more likely a decision leads to an undesirable outcome. Now, multiply this challenge – decisions will now involve millions of dollars, hundreds of data sources, and terabytes of data. In order to steer a business correctly, integration tools need to handle a heavy burden.
+
+Data integration is a combination of technical and business processes used to combine different data from disparate sources in order to answer important questions. This process generally supports the analytic processing of data by aligning, combining, and presenting each data store to an end-user. Data integration allows organizations to better understand and retain their customers, support collaboration between departments, reduce project timelines with automated development, and maintain security and compliance.
+
+Cloud connectivity, self-service (ad hoc, citizen), and the encroachment of data management functionality are major disruptors in this market. As data volumes grow, we expect to see a continued push by providers in this space to adopt core capabilities of horizontal technology sectors. Organizations are keen on adopting these changes as well, and continue to allocate resources toward the providers that can not only connect data lakes and Hadoop to their analytic frameworks, but cleanse, prepare, and govern data.
+
 ### Data Quality and Cleaning
+
+Data quality refers to the development and implementation of activities that apply quality management techniques to data in order to ensure the data is fit to serve the specific needs of an organization in a particular context. Data that is deemed fit for its intended purpose is considered high quality data.
+
+Examples of data quality issues include duplicated data, incomplete data, inconsistent data, incorrect data, poorly defined data, poorly organized data, and poor data security.
+
+Data quality assessments are executed by data quality analysts, who assess and interpret each individual data quality metric, aggregate a score for the overall quality of the data, and provide organizations with a percentage to represent the accuracy of their data. A low data quality scorecard indicates poor data quality, which is of low value, is misleading, and can lead to poor decision making that may harm the organization.
+
+Data quality rules are an integral component of data governance, which is the process of developing and establishing a defined, agreed-upon set of rules and standards by which all data across an organization is governed. Effective data governance should harmonize data from various data sources, create and monitor data usage policies, and eliminate inconsistencies and inaccuracies that would otherwise negatively impact data analytics accuracy and regulatory compliance.
 
 ## Data Analysis and Insights for Business and Finance
 
 ### Batch Processing
+
+Jobs that can run without end user interaction, or can be scheduled to run as resources permit, are called batch jobs. Batch processing is for those frequently used programs that can be executed with minimal human interaction.
+
+A program that reads a large file and generates a report, for example, is considered to be a batch job.
+
+The term batch job originated in the days when punched cards contained the directions for a computer to follow when running one or more programs. Multiple card decks representing multiple jobs would often be stacked on top of one another in the hopper of a card reader, and be run in batches.
+
+![imagen](https://user-images.githubusercontent.com/7033451/220335086-1158390a-58b5-4918-944a-6d234d51e0d6.png)
+
+
 ### Stream Processing
+
+Stream processing is the practice of taking action on a series of data at the time the data is created. Historically, data practitioners used “real-time processing” to talk generally about data that was processed as frequently as necessary for a particular use case. But with the advent and adoption of stream processing technologies and frameworks, coupled with decreasing prices for RAM, “stream processing” is used in a more specific manner.
+
+![imagen](https://user-images.githubusercontent.com/7033451/220335036-23779ad6-25d7-4e1c-b534-b3726972641a.png)
+
+
 ### Predictive Analytics and Machine Learning
+
+Predictive analytics involves advanced statistics, including descriptive analytics, statistical modeling and large volumes of data. Predictive analytics can include machine learning to analyze data quickly and efficiently. Like machine learning, predictive analytics doesn't replace the human element. Instead, PA supports data teams by reducing errors and uncovering significant insights.
+
+**Examples of predictive analytics**
+
+Predictive analytics uses models to understand what is going on in specific processes and calculate what could happen when variables change. These advanced mathematical models can result in beneficial insights, such as:
+
+- What-if analyses to predict changes in sales quotas
+- Forecasting based on historical data to predict seasonal trends in supply
+- Segmentation and cohort analysis for analyzing customer behavior
+- Identifying potential at-risk students in schools
+
+
+![imagen](https://user-images.githubusercontent.com/7033451/220335308-f36b22e6-6917-46db-89a9-3765e4f0a589.png)
+
+
 ### Data Visualization and Reporting
+
+A defining characteristic of Big Data is volume.
+
+Today’s companies collect and store vast amounts of information that would take years for a human to read and understand.
+
+Visualization resources rely on powerful tools to interpret raw data and process it to generate visual representations that allow humans to take in and understand enormous amounts of data in a few minutes.
+
+Big Data visualization describes data of almost any type — numbers, trigonometric function, linear algebra, geometric, basic, or statistical algorithms — in a visual basis format — coding, reports analytics, graphical interaction — that makes it easy to understand and interpret. 
+
+Thus, it goes far beyond typical graphs, bubble plots, histograms, pie, and donut charts to more complex representations like heat maps and box and whisker plots, enabling decision-makers to explore data sets to identify correlations or unexpected patterns.
+
+https://rockcontent.com/blog/big-data-visualization/
 
 ## Big Data Applications in Business and Finance
 
@@ -325,26 +434,42 @@ Some examples of fraud detection and prevention solutions include:
 - PayPal Fraud Detection: PayPal uses a combination of machine learning, data analytics, and human intelligence to detect and prevent fraudulent transactions on its platform.
 
 ### Customer Segmentation and Marketing
+
+**Example with Shopify**
+
+Segmentation allows marketers to better tailor their marketing efforts to various audience subsets. Those efforts can relate to both communications and product development. Specifically, segmentation helps a company:
+
+- Create and communicate targeted marketing messages that will resonate with specific groups of customers, but not with others (who will receive messages tailored to their needs and interests, instead).
+- Select the best communication channel for the segment, which might be email, social media posts, radio advertising, or another approach, depending on the segment. 
+- Identify ways to improve products or new product or service opportunities.
+- Establish better customer relationships.
+- Test pricing options.
+- Focus on the most profitable customers.
+- Improve customer service.
+- Upsell and cross-sell other products and services.
+
 ### Risk Management and Compliance
+
+Big data assists the creation of a compressive risk assessment framework by:
+
+- Fraudulent Crime Prevention: The use of big data strengthens the approach to predictive analysis, which is an effective way of detecting criminal activities such as money laundering. If a compliance officer uses big data for internal audits, cyber risks are discovered, and they intervene to avoid their occurrence. It speeds up the process of compliance and builds trust among your clients.
+
+- Managing Third Parties Threat: If you are in the process of obtaining compliance certifications, you must maintain the risk associated with sharing the data with vendors appropriately. Big data analytics can help you manage vendor-related risks. This you will accomplish by carefully evaluating their ability to protect your data before sharing with them.
+
+- Helps in Customer Service: You are required to prove that your customers are pleased with how you treat their data before you get any compliance certification. If you apply big data analytics, you will understand your customer’s behavior, which will directly influence the decision-making process, thereby enabling the compliance process.
+
 ### Investment Analysis and Portfolio Management
+
+TBC. 
+
 ### Trading and Market Analytics
 
-## Challenges and Solutions for Big Data in Business and Finance
-
-### Scalability and Performance
-### Data Privacy and Security
-### Cost and Infrastructure
-### Organizational and Cultural Challenges
-
-## Big Data Project Development in Business and Finance
-
-### Project Management and Planning
-### Use Case Identification and Requirements Gathering
-### Data Collection and Preparation
-### Model Development and Validation
-### Deployment and Monitoring
+TBC.
 
 ## Future of Big Data in Business and Finance
+
+The financial industry especially the banking segment is changing at an unprecedented pace with the emergence of mobile, artificial intelligence, IoT, Big Data, and other modern technologies. In this respect, industry players are contending with new types of risks, regulation black areas, and lack of understanding of the scope of their products. There are new players with specialist services such as online banking only, card only, or treasury services providers. On this note, the good old branch still offers valuable services to clients but are struggling to keep up in the digital space due to tough competition from cheaper, more technologically sophisticated online-only operators. So, what role does Big Data play in the modern finance industry?
+
 ### Open questions and future insights
 
 - The use of natural language processing (NLP) to analyze customer feedback and sentiment, 
@@ -352,5 +477,32 @@ Some examples of fraud detection and prevention solutions include:
 - The use of AI-powered digital assistants to help customers with financial planning and management.
 
 ### Emerging Technologies and Trends
-### Ethical and Legal Issues
-### Implications for Business and Society
+
+- Blockchain & metaverse to revolutionize order management and accounts receivable
+- Accounts receivable automation to support cash flow management
+- Predictive analytics to fuel critical finance decisions
+- AI and ML for risk management and securing financial data
+- Manage and analyze unstructured data to reveal hidden trends and patterns
+- Cloud computing
+
+
+
+
+
+# Other items to discuss
+
+Challenges and Solutions for Big Data in Business and Finance
+- Scalability and Performance
+- Data Privacy and Security
+- Cost and Infrastructure
+- Organizational and Cultural Challenges
+
+Big Data Project Development in Business and Finance
+- Project Management and Planning
+- Use Case Identification and Requirements Gathering
+- Data Collection and Preparation
+- Model Development and Validation
+- Deployment and Monitoring
+
+Ethical and Legal Issues
+- Implications for Business and Society
