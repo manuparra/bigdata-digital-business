@@ -1,6 +1,7 @@
 # Big Data and Digital Business
 
-![image](https://user-images.githubusercontent.com/7033451/220264501-93c5335c-ae8c-4240-9f95-0882ae379fc2.png)
+![imagen](https://user-images.githubusercontent.com/7033451/220340157-38ba5fd7-3c5b-4dc1-83fb-3a48c80662c4.png)
+
 
 
 - [Big Data and Digital Business](#big-data-and-digital-business)
