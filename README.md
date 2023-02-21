@@ -1,3 +1,5 @@
+# Big Data and Digital Business
+
 ![image](https://user-images.githubusercontent.com/7033451/220264501-93c5335c-ae8c-4240-9f95-0882ae379fc2.png)
 
 
@@ -43,12 +45,6 @@
     + [Emerging Technologies and Trends](#emerging-technologies-and-trends)
 - [Other items to discuss](#other-items-to-discuss)
 
-
-
-
-
-
-# Big Data and Digital Business
 
 ## Introduction to Big Data in Business and Finance
 
