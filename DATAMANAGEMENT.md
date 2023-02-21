@@ -194,6 +194,9 @@ After that, go to the main screen to create a new notebook:
 
 <img width="1243" alt="image" src="https://user-images.githubusercontent.com/7033451/220208605-5c915df5-dcba-4dbd-9cf5-b0938dc1af63.png">
 
+To work with the NoteBook, please go to the next link:
+
+https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/1518758568839157/751086991269155/6568879399845276/latest.html
 
 
 
