@@ -1,6 +1,7 @@
 # Data management in Big Data environments
 
-![imagen](https://user-images.githubusercontent.com/7033451/220340857-10ac789f-2a3f-4ce5-8aa5-7aa796f7ebcc.png)
+![imagen](https://user-images.githubusercontent.com/7033451/220341195-1681dced-5081-4b39-b22f-c8cd9ee58c11.png)
+
 
 - [Data management in Big Data environments](#data-management-in-big-data-environments)
   * [Cloud computing or my laptop ?](#cloud-computing-or-my-laptop--)
