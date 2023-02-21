@@ -1,5 +1,20 @@
 # Data management in Big Data environments
 
+![imagen](https://user-images.githubusercontent.com/7033451/220340857-10ac789f-2a3f-4ce5-8aa5-7aa796f7ebcc.png)
+
+- [Data management in Big Data environments](#data-management-in-big-data-environments)
+  * [Cloud computing or my laptop ?](#cloud-computing-or-my-laptop--)
+- [BigData programming languages](#bigdata-programming-languages)
+- [Platforms we will work with during the course](#platforms-we-will-work-with-during-the-course)
+  * [Google Colaboratory](#google-colaboratory)
+  * [Databricks](#databricks)
+- [R as BigData tool](#r-as-bigdata-tool)
+- [Starting BigData with R: Data management](#starting-bigdata-with-r--data-management)
+  * [An example with SparkR](#an-example-with-sparkr)
+  * [An example with Sparklyr](#an-example-with-sparklyr)
+  * [Main operations in Data Management](#main-operations-in-data-management)
+  * [Lets play with Databricks](#lets-play-with-databricks)
+
 Databricks and Google Colab are both popular environments for working with big data, particularly in the context of data science and machine learning.
 
 Databricks is a cloud-based platform that provides a unified analytics engine for processing and analyzing large datasets. It includes a number of tools and features for working with big data, such as Apache Spark for distributed data processing, Delta Lake for data storage and management, and MLflow for managing machine learning workflows.
