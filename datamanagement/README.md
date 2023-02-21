@@ -59,6 +59,8 @@ In addition to these programming languages, there are several key features and t
 
 ## Google Colaboratory
 
+https://colab.research.google.com/
+
 Commonly known as Google Colab, is a cloud-based data science and machine learning platform that allows users to write and run Python code in a Jupyter notebook environment. It provides free access to a virtual machine with pre-installed packages and libraries for data analysis and machine learning, eliminating the need for users to install these tools on their local machines.
 
 Some key features of Google Colab include:
@@ -73,6 +75,8 @@ Overall, Google Colab provides a convenient and accessible platform for data ana
 
 ## Databricks 
 
+https://www.databricks.com/
+
 Databricks is a cloud-based big data processing and analytics platform designed to handle large-scale data processing and machine learning workloads. It is built on top of Apache Spark and offers a collaborative workspace for data engineers, data scientists, and business analysts.
 
 Some key features of Databricks include:
@@ -84,6 +88,8 @@ Some key features of Databricks include:
 - Security: Databricks provides built-in security features, including role-based access control, encryption, and network isolation.
 
 # R as BigData tool
+
+https://www.r-project.org/
 
 R is a powerful programming language and software environment for statistical computing and graphics. While R is often associated with traditional statistical analysis, it can also be used for big data processing and analytics.
 
