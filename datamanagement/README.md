@@ -1,9 +1,9 @@
-# Data management in Big Data environments
+# Data management within Big Data environments
 
 ![imagen](https://user-images.githubusercontent.com/7033451/220341195-1681dced-5081-4b39-b22f-c8cd9ee58c11.png)
 
 
-- [Data management in Big Data environments](#data-management-in-big-data-environments)
+- [Data management in Big Data environments](#data-management-environments)
   * [Cloud computing or my laptop ?](#cloud-computing-or-my-laptop--)
 - [BigData programming languages](#bigdata-programming-languages)
 - [Platforms we will work with during the course](#platforms-we-will-work-with-during-the-course)
@@ -15,6 +15,8 @@
   * [An example with Sparklyr](#an-example-with-sparklyr)
   * [Main operations in Data Management](#main-operations-in-data-management)
   * [Lets play with Databricks](#lets-play-with-databricks)
+
+# Data management environments
 
 Databricks and Google Colab are both popular environments for working with big data, particularly in the context of data science and machine learning.
 
