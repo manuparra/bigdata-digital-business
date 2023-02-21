@@ -45,6 +45,7 @@
     + [Open questions and future insights](#open-questions-and-future-insights)
     + [Emerging Technologies and Trends](#emerging-technologies-and-trends)
 - [Other items to discuss](#other-items-to-discuss)
+- [Class exercise](#class-exercise)
 
 
 ## Introduction to Big Data in Business and Finance
@@ -532,8 +533,6 @@ The financial industry especially the banking segment is changing at an unpreced
 
 
 
-
-
 # Other items to discuss
 
 Challenges and Solutions for Big Data in Business and Finance
@@ -551,3 +550,15 @@ Big Data Project Development in Business and Finance
 
 Ethical and Legal Issues
 - Implications for Business and Society
+
+
+# Class exercise
+
+- Start by introducing the topic: Introduce a Big Data concept such as data cleaning, modeling, or visualization. Explain the importance of the concept and how it relates to real-world applications.
+- Form groups: Divide the class into groups of 4-5 students.
+- Assign a question: Assign each group a specific question related to the Big Data concept. For example, "How can we use data visualization to analyze customer behavior?" or "What are the best techniques for cleaning large datasets?"
+- Brainstorm ideas: Have each group use star bursting to generate as many ideas as possible related to their question. Each student should write down their ideas on sticky notes, and then the group should organize the notes into clusters based on similar themes or ideas.
+- Share ideas: Have each group share their ideas with the class. Encourage other students to ask questions and provide feedback on the ideas presented.
+- Refine ideas: Have each group refine their ideas based on the feedback received from the class. Encourage them to choose the most promising ideas and develop them further.
+- Present the results: At the end of the exercise, have each group present their final ideas to the class. This will allow other students to learn from their peers and provide additional feedback.
+- 
