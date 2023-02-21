@@ -1,6 +1,54 @@
-# Big Data and Digital Business
-
 ![image](https://user-images.githubusercontent.com/7033451/220264501-93c5335c-ae8c-4240-9f95-0882ae379fc2.png)
+
+
+- [Big Data and Digital Business](#big-data-and-digital-business)
+  * [Introduction to Big Data in Business and Finance](#introduction-to-big-data-in-business-and-finance)
+    + [Definition and features of Big Data](#definition-and-features-of-big-data)
+      - [Big Data ?](#big-data--)
+      - [History of Big Data](#history-of-big-data)
+      - [Examples of Big Data in our daily lives](#examples-of-big-data-in-our-daily-lives)
+    + [BigData challenges](#bigdata-challenges)
+    + [Applications of Big Data in business and finance](#applications-of-big-data-in-business-and-finance)
+      - [Examples of Big Data related with Industry and Businesses](#examples-of-big-data-related-with-industry-and-businesses)
+    + [The impact of Big Data on decision-making and strategy](#the-impact-of-big-data-on-decision-making-and-strategy)
+    + [FinTech ?](#fintech--)
+      - [Application of Artificial Intelligence (AI) is already being used in the FinTech industry, and some potential future developments](#application-of-artificial-intelligence--ai--is-already-being-used-in-the-fintech-industry--and-some-potential-future-developments)
+  * [Big Data Technologies and Tools for Business and Finance](#big-data-technologies-and-tools-for-business-and-finance)
+    + [How to work with BigData](#how-to-work-with-bigdata)
+    + [Overall steps for a BigData workflow](#overall-steps-for-a-bigdata-workflow)
+    + [Hadoop Ecosystem](#hadoop-ecosystem)
+    + [Apache Spark](#apache-spark)
+    + [NoSQL Databases](#nosql-databases)
+    + [Stream Processing Tools](#stream-processing-tools)
+    + [In-Memory Computing Tools](#in-memory-computing-tools)
+    + [Business Intelligence and Analytics Tools](#business-intelligence-and-analytics-tools)
+  * [Data Storage and Management in Business and Finance](#data-storage-and-management-in-business-and-finance)
+    + [Data Warehousing and Data Lakes](#data-warehousing-and-data-lakes)
+    + [Data Governance and Security](#data-governance-and-security)
+    + [Data Integration and Management](#data-integration-and-management)
+    + [Data Quality and Cleaning](#data-quality-and-cleaning)
+  * [Data Analysis and Insights for Business and Finance](#data-analysis-and-insights-for-business-and-finance)
+    + [Batch Processing](#batch-processing)
+    + [Stream Processing](#stream-processing)
+    + [Predictive Analytics and Machine Learning](#predictive-analytics-and-machine-learning)
+    + [Data Visualization and Reporting](#data-visualization-and-reporting)
+  * [Big Data Applications in Business and Finance](#big-data-applications-in-business-and-finance)
+    + [Fraud Detection and Prevention](#fraud-detection-and-prevention)
+    + [Customer Segmentation and Marketing](#customer-segmentation-and-marketing)
+    + [Risk Management and Compliance](#risk-management-and-compliance)
+    + [Investment Analysis and Portfolio Management](#investment-analysis-and-portfolio-management)
+    + [Trading and Market Analytics](#trading-and-market-analytics)
+  * [Future of Big Data in Business and Finance](#future-of-big-data-in-business-and-finance)
+    + [Open questions and future insights](#open-questions-and-future-insights)
+    + [Emerging Technologies and Trends](#emerging-technologies-and-trends)
+- [Other items to discuss](#other-items-to-discuss)
+
+
+
+
+
+
+# Big Data and Digital Business
 
 ## Introduction to Big Data in Business and Finance
 
