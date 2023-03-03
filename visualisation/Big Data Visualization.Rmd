@@ -1,0 +1,337 @@
+
+---
+title: "Big Data Visualization"
+output:
+  html_document:
+    toc: true
+---
+
+
+
+Visualising certain features and patterns in large datasets is challenging for two reasons:
+
+- Firstly, depending on the type of graph, plotting raw data consisting of many observations (millions) can be time-consuming (and generate large figure files), as well as unmanageable.
+
+- Secondly, patterns can be more difficult to recognise due to the large amount of data in a graph. Both problems are especially related to the visualisation of raw data for exploratory or descriptive purposes. The visualisation of already calculated aggregations or estimates is often very similar whether working with large or small data sets.
+
+```{r}
+%md
+
+Install packages for benchmarking and profiling
+
+
+```
+
+
+```{r}
+install.packages("pryr") # load package
+install.packages("bench")
+install.packages("fs")
+
+library(ggplot2) # for plotting
+library(pryr) # for profiling
+library(bench) # for profiling
+library(fs) # for profiling
+```
+
+
+We are going to generate a dataset (syntetic) with a distribution of a million points.
+
+```{r}
+# random numbers generation
+x <- rnorm(10^7, mean=5)
+y <- 1 + 1.4*x + rnorm(10^7)
+plotdata <- data.frame(x=x, y=y)
+```
+
+
+```{r}
+head(plotdata)
+```
+
+
+```{r}
+# Testing the object size (data size in memory)
+object_size(plotdata)
+```
+
+
+```{r}
+# Lets print this plot 
+splot <- ggplot(plotdata, aes(x=x, y=y))+ geom_point()
+```
+
+
+```{r}
+# Check the status and size
+object_size(splot)
+```
+
+
+```{r}
+# In memory (RAM) what is the storage used.
+mem_used()
+```
+
+
+```{r}
+# We use this function to get the amount of time to draw this plot
+system.time(mem_used())
+```
+
+
+```{r}
+# Drawing the plot and checking the time to generate this plot 
+#splot <- ggplot(plotdata, aes(x=x, y=y))+ geom_point()
+system.time(print(splot))
+```
+
+
+```{r}
+# How many MB are needed to plot this ?
+mem_used()
+```
+
+
+```{fs}
+ls /user/
+```
+
+```{r}
+# Now is time to save the plot and to check the storage needed for this PDF image 
+ggsave("splot.pdf", device="pdf", width = 5, height = 5)
+file_size("splot.pdf")
+```
+
+
+
+# How to optimise plots BigData
+
+Avoid fancy symbols (costly rendering) It turns out that one aspect of the problem is the particular symbols/characters used in ggplot (and other plot functions in R) for the points in such a scatter-plot. Thus, one solution is to override the default set of characters directly when calling `ggplot()`. A reasonable choice of character for this purpose is simply the full point (`.`)
+
+```{r}
+splot2 <- ggplot(plotdata, aes(x=x, y=y))+ geom_point(pch=".")
+```
+
+
+```{r}
+mem_used()
+```
+
+
+```{r}
+system.time(print(splot2))
+```
+
+
+
+**Use rasterization (bitmap graphics) instead of vector graphics.**
+By default, most data visualization libraries, including `ggplot2`, are implemented to generate vector-based graphics. Conceptually, this makes a lot of sense for any type of plot when the number of observations plotted is small or moderate. In simple terms, vector-based graphics define lines and shapes as vectors in a coordinate system. In the case of a scatter-plot, the x and y coordinates of every point need to be recorded. In contrast, bitmap files contain image information in the form of a matrix (or several matrices if colors are involved), whereby each cell of the matrix represents a pixel and contains information about the pixel’s color. While a vector-based representation of plot of few observations is likely more memory-efficient than a high-resolution bitmap representation of the same plot, it might well be the other way around when we are plotting millions of observations.
+
+```{r}
+install.packages("scattermore")
+library(scattermore)
+```
+
+
+```{r}
+# Scatterplot
+splot3 <- ggplot()+ geom_scattermore(aes(x=x, y=y), data=plotdata)
+
+# Show plot in interactive session
+system.time(print(splot3))
+```
+
+
+```{r}
+# Plot PDF with a minimal storage size
+ggsave("splot3.pdf",  device="pdf", width = 5, height = 5)
+file_size("splot3.pdf")
+```
+
+
+```{r}
+%md
+
+# Using aggregates instead full data
+
+Use aggregates instead of raw data Depending on what pattern/aspect of the data you want to inspect visually, you might not actually need to plot all observations directly but rather the result of aggregating the observations first. 
+There are several options to do this, but in the context of scatter plots based on many observations, a two-dimensional bin plot can be a good starting point. The idea behind this approach is to divide the canvas into grid-cells (typically in the form of rectangles or hexagons), compute for each grid cell the number of observations/points that would fall into it (in a scatter plot), and then indicate the number of observations per grid cell via the cell’s shading. Such a 2D bin plot of the same data as above can be generated via `geom_hex()`.
+
+```
+
+
+```{r}
+# Plotting using geom_bind2d
+splot4 <- ggplot(plotdata, aes(x=x, y=y)) + geom_bin2d()
+
+# Print this plot with a minimum time of rendering
+print(splot4)
+```
+
+
+
+Using Scattermore and transparencies, we can optimise draws and plots in a easy way
+
+```{r}
+# Using geom_scattermore and alpha.
+splot4 <- ggplot(plotdata, aes(x=x, y=y)) + geom_scattermore(pointsize = 2, alpha=0.1)
+
+print(splot4)
+```
+
+
+```{r}
+# Time to get plots ready
+system.time(print(splot4))
+```
+
+
+
+# BigData representation with less details
+
+We fail to see smaller differences in this visualization. In order to reduce the dominance of the 2D bins with very high counts, we display the natural logarithm of counts and display the bins as points.
+
+```{r}
+# Aggrupate by 2D bins using natural logarithm of count with, stat_bin_2d
+splot4 <- ggplot(plotdata, aes(x=x, y=y)) + stat_bin_2d(geom="point", mapping= aes(size = log(after_stat(count)))) + guides(fill = "none")
+
+# Print this plot
+print(splot4)
+```
+
+
+
+Improving data representation
+
+```{r}
+
+# Aggrupate by 2D bins using natural logarithm of count with, stat_bin_2d
+splot4 <- ggplot(plotdata, aes(x=x, y=y)) + 
+     geom_scattermore(pointsize = 3, alpha=0.2, color="darkgreen") +
+     geom_smooth(method = "lm", colour = "black") +
+     ylab("y axis") +
+     xlab("x axis") +
+     theme_bw(base_size = 18, base_family = "serif") +
+     theme(axis.title = element_text(face="bold"))
+
+# Print this plot
+print(splot4)
+```
+
+
+```{r}
+%md
+
+# Working with GIS and NYC Taxi
+
+```
+
+
+```{bash}
+apt-get -y install libgeos-dev
+install.packages("rgdal")
+install.packages("rgeos")
+```
+
+```{r}
+library("rgdal")
+library("rgeos")
+```
+
+
+```{r}
+# download the zipped shapefile to a temporary file; unzip
+BASE_URL <- "https://www1.nyc.gov/assets/planning/download/zip/data-maps/open-data/"
+FILE <- "nycd_19a.zip"
+URL <- paste0(BASE_URL, FILE)
+tmp_file <- tempfile()
+download.file(URL, tmp_file)
+file_path <- unzip(tmp_file, exdir= "data")
+# delete the temporary file
+unlink(tmp_file)
+```
+
+
+```{r}
+print(file_path)
+```
+
+
+```{r}
+# read GIS data
+nyc_map <- readOGR(file_path[1], verbose = FALSE)
+```
+
+
+```{r}
+# transform the projection
+p <- CRS("+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0")
+nyc_map <- spTransform(nyc_map, p)
+```
+
+
+```{r}
+#One last preparatory step is to convert the map data to a data.frame for plotting with ggplot.
+nyc_map <- fortify(nyc_map)
+```
+
+
+```{r}
+# Limits of the map
+taxi_trips <- taxi[Start_Lon <= max(nyc_map$long) & 
+                        Start_Lon >= min(nyc_map$long) &
+                        End_Lon <= max(nyc_map$long) &
+                        End_Lon >= min(nyc_map$long) &
+                        Start_Lat <= max(nyc_map$lat) & 
+                        Start_Lat >= min(nyc_map$lat) &
+                        End_Lat <= max(nyc_map$lat) &
+                        End_Lat >= min(nyc_map$lat) 
+                        ]
+taxi_trips <- taxi_trips[base::sample(1:nrow(taxi_trips), 50000)]
+```
+
+
+```{r}
+# In order to visualize how the cab traffic is changing over the course of the day, we add an additional variable called start_time in which we store the time (hour) of the day a trip started.
+taxi_trips$start_time <- lubridate::hour(taxi_trips$Trip_Pickup_DateTime)
+```
+
+
+```{r}
+# Define new variable for facets
+taxi_trips$time_of_day <- "Morning"
+taxi_trips[start_time > 12 & start_time < 17]$time_of_day <- "Afternoon"
+taxi_trips[start_time %in% c(17:24, 0:5)]$time_of_day <- "Evening/Night"
+taxi_trips$time_of_day  <- 
+  factor(taxi_trips$time_of_day,
+         levels = c("Morning", "Afternoon", "Evening/Night"))
+```
+
+
+```{r}
+# Set up the MAP, then we will add the points
+locations <- ggplot(taxi_trips, aes(x=long, y=lat))
+# add the map geometry
+locations <- locations + geom_map(data = nyc_map,
+                                  map = nyc_map,
+                                  aes(map_id = id))
+locations
+```
+
+
+```{r}
+locations <- ggplot(taxi_trips, aes(x=long, y=lat))
+              + geom_scattermore(aes(x=Start_Lon, y=Start_Lat),
+                color="orange",
+                pointsize = 1,
+                alpha = 0.2)
+```
+
+
+# Plotting BigData with NYT
+
+```{r}
+
+```
+
